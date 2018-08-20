@@ -1,0 +1,222 @@
+{
+  "ADS": {
+    "stack-select": {
+      "KAFKA": {
+        "KAFKA_BROKER": {
+          "STACK-SELECT-PACKAGE": "kafka-broker",
+          "INSTALL": [
+            "kafka-broker"
+          ],
+          "PATCH": [
+            "kafka-broker"
+          ],
+          "STANDARD": [
+            "kafka-broker"
+          ]
+        },
+        "KAFKA_MANAGER": {
+          "STACK-SELECT-PACKAGE": "kafka-manager",
+          "INSTALL": [
+            "kafka-manager"
+          ],
+          "PATCH": [
+            "kafka-manager"
+          ],
+          "STANDARD": [
+            "kafka-manager"
+          ]
+        }
+      },
+      "NIFI": {
+        "NIFI_MASTER": {
+          "STACK-SELECT-PACKAGE": "nifi",
+          "INSTALL": [
+            "nifi"
+          ],
+          "PATCH": [
+            "nifi"
+          ],
+          "STANDARD": [
+            "nifi"
+          ]
+        }
+       },
+        "NIFI_REGISTRY": {
+         "NIFI_REGISTRY_MASTER": {
+          "STACK-SELECT-PACKAGE": "nifi-registry",
+          "INSTALL": [
+            "nifi-registry"
+          ],
+          "PATCH": [
+            "nifi-registry"
+          ],
+          "STANDARD": [
+            "nifi-registry"
+          ]
+        }
+      },
+      "KNOX": {
+        "KNOX_GATEWAY": {
+          "STACK-SELECT-PACKAGE": "knox-server",
+          "INSTALL": [
+            "knox-server"
+          ],
+          "PATCH": [
+            "knox-server"
+          ],
+          "STANDARD": [
+            "knox-server"
+          ]
+        }
+      },
+      "RANGER": {
+        "RANGER_ADMIN": {
+          "STACK-SELECT-PACKAGE": "ranger-admin",
+          "INSTALL": [
+            "ranger-admin"
+          ],
+          "PATCH": [
+            "ranger-admin"
+          ],
+          "STANDARD": [
+            "ranger-admin"
+          ]
+        },
+        "RANGER_TAGSYNC": {
+          "STACK-SELECT-PACKAGE": "ranger-tagsync",
+          "INSTALL": [
+            "ranger-tagsync"
+          ],
+          "PATCH": [
+            "ranger-tagsync"
+          ],
+          "STANDARD": [
+            "ranger-tagsync"
+          ]
+        },
+        "RANGER_USERSYNC": {
+          "STACK-SELECT-PACKAGE": "ranger-usersync",
+          "INSTALL": [
+            "ranger-usersync"
+          ],
+          "PATCH": [
+            "ranger-usersync"
+          ],
+          "STANDARD": [
+            "ranger-usersync"
+          ]
+        }
+      },
+      "RANGER_KMS": {
+        "RANGER_KMS_SERVER": {
+          "STACK-SELECT-PACKAGE": "ranger-kms",
+          "INSTALL": [
+            "ranger-kms"
+          ],
+          "PATCH": [
+            "ranger-kms"
+          ],
+          "STANDARD": [
+            "ranger-kms"
+          ]
+        }
+      },
+      "SOLR": {
+        "SOLR": {
+          "STACK-SELECT-PACKAGE": "solr-server",
+          "INSTALL": [
+            "solr-server"
+          ],
+          "PATCH": [
+            "solr-server"
+          ],
+          "STANDARD": [
+            "solr-server"
+          ]
+        }
+      },
+      "ZOOKEEPER": {
+        "ZOOKEEPER_CLIENT": {
+          "STACK-SELECT-PACKAGE": "zookeeper-client",
+          "INSTALL": [
+            "zookeeper-client"
+          ],
+          "PATCH": [
+            "zookeeper-client"
+          ],
+          "STANDARD": [
+            "zookeeper-client"
+          ]
+        },
+        "ZOOKEEPER_SERVER": {
+          "STACK-SELECT-PACKAGE": "zookeeper-server",
+          "INSTALL": [
+            "zookeeper-server"
+          ],
+          "PATCH": [
+            "zookeeper-server"
+          ],
+          "STANDARD": [
+            "zookeeper-server"
+          ]
+        }
+      }
+    },
+    "conf-select": {
+      "kafka": [
+        {
+          "conf_dir": "/etc/kafka/conf",
+          "current_dir": "{0}/current/kafka-broker/conf"
+        }
+      ],
+      "knox": [
+        {
+          "conf_dir": "/etc/knox/conf",
+          "current_dir": "{0}/current/knox-server/conf"
+        }
+      ],
+      "livy": [
+        {
+          "conf_dir": "/etc/livy/conf",
+          "current_dir": "{0}/current/livy-client/conf"
+        }
+      ],
+      "nifi": [
+        {
+          "conf_dir": "/etc/nifi/conf",
+          "current_dir": "{0}/current/nifi/conf"
+        }
+      ],
+      "ranger-admin": [
+        {
+          "conf_dir": "/etc/ranger/admin/conf",
+          "current_dir": "{0}/current/ranger-admin/conf"
+        }
+      ],
+      "ranger-kms": [
+        {
+          "conf_dir": "/etc/ranger/kms/conf",
+          "current_dir": "{0}/current/ranger-kms/conf"
+        }
+      ],
+      "ranger-tagsync": [
+        {
+          "conf_dir": "/etc/ranger/tagsync/conf",
+          "current_dir": "{0}/current/ranger-tagsync/conf"
+        }
+      ],
+      "ranger-usersync": [
+        {
+          "conf_dir": "/etc/ranger/usersync/conf",
+          "current_dir": "{0}/current/ranger-usersync/conf"
+        }
+      ],
+      "zookeeper": [
+        {
+          "conf_dir": "/etc/zookeeper/conf",
+          "current_dir": "{0}/current/zookeeper-client/conf"
+        }
+      ]
+    }
+  }
+}

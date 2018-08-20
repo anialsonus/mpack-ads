@@ -1,0 +1,14 @@
+{
+  "ADS": {
+    "stack_selector": [
+      "ads-select",
+      "/usr/bin/ads-select",
+      "ads-select"
+    ],
+    "conf_selector": [
+      "conf-select",
+      "/usr/bin/conf-select",
+      "conf-select"
+    ]
+  }
+}

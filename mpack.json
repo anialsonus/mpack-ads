@@ -1,0 +1,19 @@
+{
+  "type" : "full-release",
+  "name" : "ads-ambari-mpack",
+  "version": "1.0.0.0-1",
+  "branch": "UNKNOWN",
+  "description" : "ADS Ambari Management Pack",
+  "prerequisites": {
+    "min-ambari-version" : "2.7.0.0",
+    "max-ambari-version" : ""
+  },
+  "artifacts": [
+    {
+      "name" : "ads-stack-definitions",
+      "type" : "stack-definitions",
+      "source_dir": "stacks"
+    }
+  ]
+}
+
