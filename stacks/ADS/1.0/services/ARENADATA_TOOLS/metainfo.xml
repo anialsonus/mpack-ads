@@ -28,7 +28,8 @@
           <name>ADS_TOOLS</name>
           <displayName>Arenadata Tools</displayName>
           <category>CLIENT</category>
-          <cardinality>1+</cardinality>
+          <cardinality>ALL</cardinality>
+          <versionAdvertised>false</versionAdvertised>
           <commandScript>
             <script>scripts/arenadata_tools.py</script>
             <scriptType>PYTHON</scriptType>
