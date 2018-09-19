@@ -23,7 +23,7 @@ class kafka_manager(Script):
         import params
         env.set_params(params)
         Execute(format("curl -d 'name=Default&zkHosts={zookeeper_connect}&"+
-                                    "kafkaVersion=1.1.0&"+
+                                    "kafkaVersion=2.0.0&"+
                                     "jmxEnabled=true&"+
                                     "jmxUser=&"+
                                     "jmxPass=&"+
