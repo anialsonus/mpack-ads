@@ -38,7 +38,7 @@ class ServiceCheck(Script):
     create_topic_cmd_created_output = "Created topic \"ambari_kafka_service_check\"."
     create_topic_cmd_exists_output = "Topic \"ambari_kafka_service_check\" already exists."
     source_cmd = format("source {conf_dir}/kafka-env.sh")
-    topic_exists_cmd = format(source_cmd + " ; " + "{kafka_home}/bin/kafka-topics.sh --zookeeper {kafka_config[zookeeper.connect]} --topic {topic} --list")
+    topic_exists_cmd = format("{kafka_home}/bin/kafka-topics.sh --zookeeper {kafka_config[zookeeper.connect]} --topic {topic} --list")
     topic_exists_cmd_code, topic_exists_cmd_out = shell.call(topic_exists_cmd, logoutput=True, quiet=False, user=params.kafka_user)
 
     if topic_exists_cmd_code > 0:
@@ -51,7 +51,7 @@ class ServiceCheck(Script):
       # run create topic command only if the topic doesn't exists
     if topic not in topic_exists_cmd_out:
       create_topic_cmd = format("{kafka_home}/bin/kafka-topics.sh --zookeeper {kafka_config[zookeeper.connect]} --create --topic {topic} --partitions 1 --replication-factor 1")
-      command = source_cmd + " ; " + create_topic_cmd
+      command = 'export JAVA_HOME='+ params.java64_home + ' ; ' + create_topic_cmd
       Logger.info("Running kafka create topic command: %s" % command)
       call_and_match_output(command, format("({create_topic_cmd_created_output})|({create_topic_cmd_exists_output})"), "Failed to check that topic exists", user=params.kafka_user)
 
