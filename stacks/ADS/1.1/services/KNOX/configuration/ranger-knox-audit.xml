@@ -103,6 +103,12 @@
     <on-ambari-upgrade add="false"/>
   </property>
   <property>
+    <name>xasecure.audit.destination.db</name>
+    <value>false</value>
+    <description>Using audit destination db</description>
+    <on-ambari-upgrade add="false"/>
+  </property>
+  <property>
     <name>xasecure.audit.destination.solr.batch.filespool.dir</name>
     <value>/var/log/knox/audit/solr/spool</value>
     <description>/var/log/knox/audit/solr/spool</description>
